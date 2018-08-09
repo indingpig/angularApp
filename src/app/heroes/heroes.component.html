@@ -1,3 +1,26 @@
-<p>
-  heroes works!
-</p>
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div>
+    <span>id:</span>{{selectedHero.id}}</div>
+  <div>
+    <label>
+      name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name">
+    </label>
+  </div>
+</div>
+
+  <!-- <ul class="heroes">
+      <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [ngClass]="{'select': hero.select}">
+        <p class="price">{{hero.id}}</p>
+        <p class="onSell">{{hero.name}}</p>
+        <div [ngClass]="{'select': hero.select}" *ngIf="hero.select"></div>
+      </li>
+    </ul> -->
+  

@@ -1,0 +1,91 @@
+/* ul {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    border: 1px solid #666;
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+ul li.select {
+    border: 1px solid #3eb946;
+}
+ul li.select > p {
+    color:  #3eb946;
+}
+ul li div.select {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #3eb946;
+    border-left: 20px solid transparent; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+ul .price {
+    font-size: 22px;
+    color: #000000
+}
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
+
+.selected {
+    background-color: #cfd8dc !important;
+    color: white;
+}
+.heroes {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+}
+.heroes li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #eee;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+}
+.heroes li.selected:hover{
+    background-color: #bbd8dc !important;
+    color: white;
+}
+.heroes li:hover {
+    color: #607d8b;
+    background-color: #ddd;
+    left: .1em;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+}
+.heroes .text {
+    position: relative;
+    top:-3px;
+}
+.heroes .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: .8em .7em 0 .7em;
+    background-color: #607d8b;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+}
