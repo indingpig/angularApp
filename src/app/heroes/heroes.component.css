@@ -44,6 +44,7 @@ p {
 .selected {
     background-color: #cfd8dc !important;
     color: white;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.5);
 }
 .heroes {
     margin: 0 0 2em 0;
@@ -60,6 +61,8 @@ p {
     padding: .3em 0;
     height: 1.6em;
     border-radius: 4px;
+    bottom: 0;
+    transition: all .2s linear
 }
 .heroes li.selected:hover{
     background-color: #bbd8dc !important;
@@ -68,7 +71,7 @@ p {
 .heroes li:hover {
     color: #607d8b;
     background-color: #ddd;
-    left: .1em;
+    bottom: .1em;
     box-shadow: 0px 5px 10px rgba(0,0,0,.5);
 }
 .heroes .text {
