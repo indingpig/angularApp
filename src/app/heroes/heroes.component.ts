@@ -21,7 +21,12 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     // this.heroes = this.heroService.getHeroes(); /* 从heroServie中获取数据并赋予heroes */
     this.heroService.getHeroes()
-      .subscribe(_heroes => this.heroes = _heroes);
+      .subscribe(_heroes => {
+        // 使用演示定时器模拟网络延时
+        setTimeout(() => {
+          this.heroes = _heroes;
+        }, 500);
+      });
     /*等价于下面的函数
     this.heroService.getHeroes().subscribe(function(heroes) {
       this.heroes = heroes;
