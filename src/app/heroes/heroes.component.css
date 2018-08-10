@@ -43,6 +43,7 @@ p {
 
 .selected {
     background-color: #cfd8dc !important;
+    bottom: .1em !important;
     color: white;
     box-shadow: 0px 5px 10px rgba(0,0,0,.5);
 }

@@ -12,7 +12,11 @@ export class HeroService {
   // 在这里的构造函数需要注入引入的mess服务
   constructor(private messageService: MessageService) { }
   getHeroes(): Observable<Hero[]> {
-    this.messageService.add('HeroService: fetched heroes');
+    // this.messageService.add('HeroService: fetched heroes');
     return of(HEROES);
+  }
+  getHero(_id: number): Observable<Hero> {
+    this.messageService.add(`HeroService: fetched hero id=${_id}`);
+    return of(HEROES.find(hero => hero.id === _id));
   }
 }
