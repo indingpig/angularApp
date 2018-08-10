@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { HEROES } from '../mock-heros';
+import { HeroService } from '../services/hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -8,7 +8,7 @@ import { HEROES } from '../mock-heros';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroes = HEROES;
+  heroes: Hero[];
 
   selectedHero: Hero;
 
@@ -16,9 +16,20 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero;
   }
 
-  constructor() { }
+  constructor(private heroService: HeroService) { }
+
+  getHeroes(): void {
+    // this.heroes = this.heroService.getHeroes(); /* 从heroServie中获取数据并赋予heroes */
+    this.heroService.getHeroes()
+      .subscribe(_heroes => this.heroes = _heroes);
+    /*等价于下面的函数
+    this.heroService.getHeroes().subscribe(function(heroes) {
+      this.heroes = heroes;
+    }); */
+  }
 
   ngOnInit() {
+    this.getHeroes(); // 在初始化钩子中调用获取数据函数；
   }
 
 }
