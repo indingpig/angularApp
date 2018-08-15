@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormioModule } from 'angular-formio';
+import { AlertModule } from 'ngx-bootstrap'; /* 添加bootstrap  https://github.com/valor-software/ngx-bootstrap*/
 /* 这个是数据双向绑定模块 */
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports: [
+    AlertModule.forRoot(),
     BrowserModule,
     FormsModule,
     AppRoutingModule,
