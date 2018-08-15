@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-// import FormBuilder from 'formiojs/FormBuilder';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, EventEmitter } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
-
-// const builder = new FormBuilder(document.getElementById('formio'));
 
 @Component({
   selector: 'app-formbuilder',
@@ -13,13 +12,30 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 
 export class FormbuilderComponent implements OnInit {
 
-  constructor() { }
+  constructor( private http: HttpClient) { }
   @ViewChild('json') jsonElement?: ElementRef;
   @ViewChild('code') codeElement?: ElementRef;
+
+  public triggerRefresh: any;
+
   public form: Object = {
     components: [],
   };
   ngOnInit() {
+    this.triggerRefresh = new EventEmitter();
+  }
+  save() {
+    // this.http.post();
+    console.log(this.form);
+    localStorage.setItem('formBuilderData', JSON.stringify(this.form));
+  }
+  onChange(event) {
+    // this.jsonElement.nativeElement.innerHTML = '';
+    // this.jsonElement.nativeElement.appendChild(document.createTextNode(JSON.stringify(event.form, null, 4)));
+    // this.triggerRefresh.emit({
+    //   property: 'form',
+    //   value: this.form
+    // });
   }
 
 }
