@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 const Validator = require('../../../../node_modules/formiojs/components/Validator.js');
+const Base = require('../../../../node_modules/formiojs/components/base/base.js');
 
 @Component({
   selector: 'app-formio',
@@ -10,6 +11,7 @@ export class FormioComponent implements OnInit {
 
   constructor(public element: ElementRef) { }
   public v = Validator;
+  public base = Base;
   public a: any;
   public formConfig: any;
   ngOnInit() {
@@ -22,7 +24,7 @@ export class FormioComponent implements OnInit {
     this.formConfig = JSON.parse(localStorage.getItem('formBuilderData'));
   }
   save() {
-    console.log(this.v);
+    console.log(this.base);
     this.a = this.element.nativeElement.querySelector('form[name="formioForm"]');
     console.log(this.a);
   }
