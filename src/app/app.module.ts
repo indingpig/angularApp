@@ -15,6 +15,8 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormioComponent } from './components/formio/formio.component';
 import { FormbuilderComponent } from './components/formbuilder/formbuilder.component';
+import { FormButtonComponent } from './components/form-button/form-button.component';
+import { MyFormComponent } from './components/my-form/my-form.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +35,8 @@ import { AppRoutingModule } from './app-routing.module';
     DashboardComponent,
     FormioComponent,
     FormbuilderComponent,
+    FormButtonComponent,
+    MyFormComponent,
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,

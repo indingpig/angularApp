@@ -1,7 +1,8 @@
 <div>
   <div class="form-wrapper">
-    <button type="button" (click)="save()" class="btn info">保存</button>
-    <form name="formioForm">
+    <form name="formioForm" novalidate="novalidate">
+      {{formioForm}}
+      <app-form-button></app-form-button>
       <formio [form]="formConfig" ></formio>
     </form>
   </div>

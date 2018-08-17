@@ -1,0 +1,9 @@
+<div>
+  <!-- <app-formio></app-formio> -->
+  <form name="myForm">
+    <input type="text" class="input-group" [(ngModel)]="userName" name="userName">
+    <button class="btn info" type="button" (click)="save(myForm)">save</button>
+    {{userName}}
+    {{myForm}}
+  </form>
+</div>
