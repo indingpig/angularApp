@@ -2,6 +2,10 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 // const Validator = require('../../../../node_modules/formiojs/components/Validator.js');
 // const Base = require('../../../../node_modules/formiojs/components/base/base.js').default;
 
+import Components from 'formiojs/components/index';
+import { BaseComponent } from 'formiojs/components/base/Base';
+// import { FormioForm } from 'formiojs/full';
+
 @Component({
   selector: 'app-formio',
   templateUrl: './formio.component.html',

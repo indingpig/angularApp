@@ -3,6 +3,10 @@ import { FormServiceService } from '../../services/form-service.service';
 import { FormioComponent, FormioService } from 'angular-formio';
 
 
+class Lists {
+  constructor() {}
+}
+
 @Component({
   selector: 'app-my-form',
   templateUrl: './my-form.component.html',
@@ -12,8 +16,7 @@ export class MyFormComponent implements OnInit {
 
   constructor(private _myformService: FormServiceService) { }
 
-
-
+  public lists: Lists[];
 
   ngOnInit() {
 
